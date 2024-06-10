@@ -27,9 +27,20 @@ greetOneCat(name)
 catAgeMessage(name)
 catCalorieCounter(name)
 
-const talkToCats = (greeting, name) => {
-    
-}
+const talkToCats = (greetingFunction, catName) => {
+    if (typeof greetingFunction === 'function' && catName) {
+        console.log(`Function: ${greetingFunction.name}, Name: ${catName}`);
+        greetingFunction(catName);
+    } else {
+        console.log('Invalid function or cat name');
+    }
+};
+
+
+talkToCats(greetOneCat, name);
+talkToCats(catAgeMessage, name);
+talkToCats(catCalorieCounter, name);
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`app is running on PORT ${port}`))
