@@ -1,7 +1,8 @@
 import cats from "./cats.mjs";
+
+
 export const greetOneCat = (name) => { 
     cats.forEach((cat) => {
-        console.log(cat.name);
         if(cat.name.match(name))
         name = cat.name
             return name
@@ -12,6 +13,8 @@ export const greetOneCat = (name) => {
 export const greetAllCats = () => {
     cats.forEach((cat) => {
         const catgreeting = cat.says;
-        console.log(catgreeting);
+        const catMessage = (`${cat.name} says: ${catgreeting}`);
+        console.log(catMessage);
     })
-}
+        
+}   

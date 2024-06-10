@@ -1,15 +1,12 @@
 
-import cats from './cats.mjs';
-import chalk from 'chalk';
-
 import { greetOneCat, greetAllCats } from './greetings.mjs'
 
 
+
 const talkToCats = (greeting, name) => {
-    name = cats.name
-    if(greetOneCat){
-       return (greetOneCat(name))
-    }if(greetAllCats){
+    if(greeting === "greetOneCat") {
+        return (greetOneCat(name))    
+    }else if(greeting === "greetAllCats"){
         return greetAllCats()
     }else{
         return 'not a valid greeting'
@@ -17,4 +14,6 @@ const talkToCats = (greeting, name) => {
 
 }
 
-talkToCats()
+const [,, greeting, name] = process.argv;
+
+talkToCats(greeting, name)
