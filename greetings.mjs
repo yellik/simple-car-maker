@@ -1,9 +1,11 @@
+import cats from "./cats.mjs";
 export const greetOneCat = (catname) => { 
     console.log(`Hello! my name is ${name}. Nice to meet you`)
 }
-export const catAgeMessage = (name) => { 
-    const result = a * 7; 
-    console.log(`I am ${a} years old. That is ${result} is cat years. 
+export const catAgeMessage = (catYears) => { 
+    
+    catYears * 7; 
+    console.log(`I am ${cats.age} years old. That is ${result} is human years. 
     This equals to ${result} . 
  `)}
 
