@@ -1,5 +1,13 @@
 import cats from "./cats.mjs";
-export const greetOneCat = (catname) => { 
+export const greetOneCat = (name) => { 
+    cats.forEach((cat) => {
+        const catname = cat.name
+        if(catname){
+            return cat.says;
+        }else{
+            return 'there was no cat found with this name'
+        }
+    })
     console.log(`Hello! my name is ${name}. Nice to meet you`)
 }
 
